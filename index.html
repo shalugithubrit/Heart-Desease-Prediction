@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1>Heart Disease Prediction</h1>
+        <form id="heartForm">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="number" id="cholesterol" name="cholesterol" required>
+
+            <label for="bp">Blood Pressure:</label>
+            <input type="number" id="bp" name="bp" required>
+
+            <label for="fbs">Fasting Blood Sugar:</label>
+            <input type="number" id="fbs" name="fbs" required>
+
+            <label for="restecg">Resting ECG:</label>
+            <select id="restecg" name="restecg" required>
+                <option value="0">Normal</option>
+                <option value="1">Abnormality</option>
+                <option value="2">Probable or Definite Left Ventricular Hypertrophy</option>
+            </select>
+
+            <label for="slope">Slope:</label>
+            <select id="slope" name="slope" required>
+                <option value="0">Upsloping</option>
+                <option value="1">Flat</option>
+                <option value="2">Downsloping</option>
+            </select>
+
+            <label for="thal">Thal:</label>
+            <select id="thal" name="thal" required>
+                <option value="0">Normal</option>
+                <option value="1">Fixed Defect</option>
+                <option value="2">Reversible Defect</option>
+            </select>
+
+            <button type="button" onclick="predict()">Predict</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
